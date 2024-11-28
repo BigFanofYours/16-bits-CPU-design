@@ -19,6 +19,22 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 272 384 440 400)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
 (symbol
 	(rect 664 280 816 472)
 	(text "8_16bitsregisterfile" (rect 5 0 113 14)(font "Arial" (font_size 8)))
@@ -177,44 +193,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 32 304 440 384)
-	(text "ONCHIP_ROM" (rect 5 0 79 12)(font "Arial" ))
-	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 0 0 178 12)(font "Arial" ))
-		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 21 27 199 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 408 32)
-		(output)
-		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 0 0 156 12)(font "Arial" ))
-		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 255 27 411 39)(font "Arial" ))
-		(line (pt 408 32)(pt 392 32)(line_width 3))
-	)
-	(parameter
-		"ADDRESS_WIDTH"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"DATA_WIDTH"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"INIT_FILE"
-		"test.hex"
-		""
-		(type "PARAMETER_STRING")	)
-	(drawing
-		(rectangle (rect 16 16 392 64))
-	)
-	(annotation_block (parameter)(rect 120 232 352 288))
-)
-(symbol
 	(rect 896 112 1040 240)
 	(text "mux48to16" (rect 77 114 139 128)(font "Arial" (font_size 8)))
 	(text "inst7" (rect 113 4 136 16)(font "Arial" ))
@@ -259,7 +237,7 @@ applicable agreement for further details.
 	(rotate180)
 )
 (symbol
-	(rect 1336 280 1472 376)
+	(rect 1352 280 1488 376)
 	(text "Shift123" (rect 5 0 52 14)(font "Arial" (font_size 8)))
 	(text "inst9" (rect 8 80 31 92)(font "Arial" ))
 	(port
@@ -288,7 +266,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1336 376 1456 472)
+	(rect 1352 376 1472 472)
 	(text "IOControl" (rect 5 0 56 14)(font "Arial" (font_size 8)))
 	(text "inst14" (rect 8 80 37 92)(font "Arial" ))
 	(port
@@ -331,7 +309,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1584 280 1744 408)
+	(rect 1600 280 1760 408)
 	(text "DMem" (rect 5 0 39 14)(font "Arial" (font_size 8)))
 	(text "inst2" (rect 8 112 31 124)(font "Arial" ))
 	(port
@@ -373,36 +351,85 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 144 112))
 	)
 )
+(symbol
+	(rect 32 304 440 384)
+	(text "ONCHIP_ROM" (rect 5 0 79 12)(font "Arial" ))
+	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 0 0 178 12)(font "Arial" ))
+		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 21 27 199 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 408 32)
+		(output)
+		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 0 0 156 12)(font "Arial" ))
+		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 255 27 411 39)(font "Arial" ))
+		(line (pt 408 32)(pt 392 32)(line_width 3))
+	)
+	(parameter
+		"ADDRESS_WIDTH"
+		"4"
+		""
+		(type "PARAMETER_UNSIGNED_HEX")	)
+	(parameter
+		"DATA_WIDTH"
+		"16"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"INIT_FILE"
+		"test.hex"
+		""
+		(type "PARAMETER_STRING")	)
+	(drawing
+		(rectangle (rect 16 16 392 64))
+	)
+	(annotation_block (parameter)(rect 120 232 355 288))
+)
+(symbol
+	(rect 464 456 616 552)
+	(text "PC" (rect 132 82 147 96)(font "Arial" (font_size 8)))
+	(text "inst3" (rect 121 4 144 16)(font "Arial" ))
+	(port
+		(pt 152 64)
+		(input)
+		(text "I[15..0]" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "I[15..0]" (rect 94 55 131 69)(font "Arial" (font_size 8)))
+		(line (pt 152 64)(pt 136 64)(line_width 3))
+	)
+	(port
+		(pt 152 48)
+		(input)
+		(text "ZF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "ZF" (rect 116 39 131 53)(font "Arial" (font_size 8)))
+		(line (pt 152 48)(pt 136 48))
+	)
+	(port
+		(pt 152 32)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 108 23 131 37)(font "Arial" (font_size 8)))
+		(line (pt 152 32)(pt 136 32))
+	)
+	(port
+		(pt 0 64)
+		(output)
+		(text "PCO[15..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "PCO[15..0]" (rect 21 55 81 69)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 80))
+	)
+	(rotate180)
+)
 (connector
 	(text "Control[15..0]" (rect 440 320 507 332)(font "Arial" ))
 	(pt 472 336)
 	(pt 440 336)
-	(bus)
-)
-(connector
-	(text "WB[1..0]" (rect 1096 144 1139 156)(font "Arial" ))
-	(pt 1040 160)
-	(pt 1128 160)
-	(bus)
-)
-(connector
-	(pt 1040 192)
-	(pt 1504 192)
-	(bus)
-)
-(connector
-	(pt 1040 208)
-	(pt 1488 208)
-	(bus)
-)
-(connector
-	(pt 1488 208)
-	(pt 1488 312)
-	(bus)
-)
-(connector
-	(pt 1472 312)
-	(pt 1488 312)
 	(bus)
 )
 (connector
@@ -420,86 +447,6 @@ applicable agreement for further details.
 	(pt 648 208)
 	(pt 896 208)
 	(bus)
-)
-(connector
-	(text "Shift[2..0]" (rect 1304 312 1353 324)(font "Arial" ))
-	(pt 1336 328)
-	(pt 1304 328)
-	(bus)
-)
-(connector
-	(pt 1288 312)
-	(pt 1288 520)
-	(bus)
-)
-(connector
-	(pt 1272 312)
-	(pt 1288 312)
-	(bus)
-)
-(connector
-	(pt 1288 312)
-	(pt 1336 312)
-	(bus)
-)
-(connector
-	(text "ALUPC[15..0]" (rect 682 504 750 516)(font "Arial" ))
-	(pt 688 520)
-	(pt 1288 520)
-	(bus)
-)
-(connector
-	(pt 1552 360)
-	(pt 1584 360)
-	(bus)
-)
-(connector
-	(pt 1040 176)
-	(pt 1760 176)
-	(bus)
-)
-(connector
-	(pt 1744 312)
-	(pt 1760 312)
-	(bus)
-)
-(connector
-	(pt 1760 312)
-	(pt 1760 176)
-	(bus)
-)
-(connector
-	(text "REM" (rect 1562 296 1585 308)(font "Arial" ))
-	(pt 1584 312)
-	(pt 1520 312)
-)
-(connector
-	(text "WEM" (rect 1562 312 1587 324)(font "Arial" ))
-	(pt 1536 328)
-	(pt 1584 328)
-)
-(connector
-	(pt 1536 328)
-	(pt 1536 424)
-)
-(connector
-	(pt 1536 424)
-	(pt 1456 424)
-)
-(connector
-	(text "REM" (rect 1314 392 1337 404)(font "Arial" ))
-	(pt 1336 408)
-	(pt 1304 408)
-)
-(connector
-	(text "WEM" (rect 1314 408 1339 420)(font "Arial" ))
-	(pt 1336 424)
-	(pt 1304 424)
-)
-(connector
-	(text "EN" (rect 1314 424 1329 436)(font "Arial" ))
-	(pt 1336 440)
-	(pt 1304 440)
 )
 (connector
 	(pt 648 208)
@@ -542,16 +489,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1552 344)
-	(pt 1584 344)
-	(bus)
-)
-(connector
-	(pt 1552 344)
-	(pt 1552 264)
-	(bus)
-)
-(connector
 	(pt 1080 328)
 	(pt 1080 360)
 	(bus)
@@ -572,17 +509,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "Immediate[15..0]" (rect 674 472 757 484)(font "Arial" ))
-	(pt 688 488)
-	(pt 856 488)
-	(bus)
-)
-(connector
-	(pt 856 488)
-	(pt 1504 488)
-	(bus)
-)
-(connector
 	(pt 816 328)
 	(pt 856 328)
 	(bus)
@@ -598,21 +524,91 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1456 408)
-	(pt 1520 408)
+	(text "WB[1..0]" (rect 1040 144 1083 156)(font "Arial" ))
+	(pt 1072 160)
+	(pt 1040 160)
+	(bus)
 )
 (connector
-	(pt 1520 312)
-	(pt 1520 408)
+	(pt 1040 176)
+	(pt 1776 176)
+	(bus)
 )
 (connector
-	(pt 1552 264)
+	(pt 1040 192)
+	(pt 1520 192)
+	(bus)
+)
+(connector
+	(pt 1040 208)
+	(pt 1504 208)
+	(bus)
+)
+(connector
+	(pt 1504 208)
+	(pt 1504 312)
+	(bus)
+)
+(connector
+	(pt 1488 312)
+	(pt 1504 312)
+	(bus)
+)
+(connector
+	(pt 1760 312)
+	(pt 1776 312)
+	(bus)
+)
+(connector
+	(pt 1776 312)
+	(pt 1776 176)
+	(bus)
+)
+(connector
+	(pt 1552 328)
+	(pt 1552 424)
+)
+(connector
+	(pt 1552 424)
+	(pt 1472 424)
+)
+(connector
+	(pt 1568 344)
+	(pt 1568 264)
+	(bus)
+)
+(connector
+	(pt 1472 408)
+	(pt 1536 408)
+)
+(connector
+	(pt 1536 312)
+	(pt 1536 408)
+)
+(connector
 	(pt 968 264)
+	(pt 1568 264)
 	(bus)
 )
 (connector
 	(pt 968 312)
 	(pt 968 264)
+	(bus)
+)
+(connector
+	(text "DAD[4..0]" (rect 1552 460 1564 509)(font "Arial" )(vertical))
+	(pt 1568 552)
+	(pt 1568 360)
+	(bus)
+)
+(connector
+	(pt 1568 552)
+	(pt 1552 552)
+	(bus)
+)
+(connector
+	(pt 1520 552)
+	(pt 1536 552)
 	(bus)
 )
 (connector
@@ -626,32 +622,115 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1504 192)
-	(pt 1504 488)
+	(pt 1520 192)
+	(pt 1520 488)
 	(bus)
 )
 (connector
-	(pt 1504 488)
-	(pt 1504 552)
-	(bus)
-)
-(connector
-	(text "DAD[4..0]" (rect 1536 460 1548 509)(font "Arial" )(vertical))
-	(pt 1552 552)
-	(pt 1552 360)
-	(bus)
-)
-(connector
-	(pt 1552 552)
-	(pt 1536 552)
-	(bus)
-)
-(connector
-	(pt 1504 552)
+	(pt 1520 488)
 	(pt 1520 552)
 	(bus)
 )
-(junction (pt 1288 312))
+(connector
+	(pt 1272 312)
+	(pt 1352 312)
+	(bus)
+)
+(connector
+	(text "Shift[2..0]" (rect 1320 312 1369 324)(font "Arial" ))
+	(pt 1320 328)
+	(pt 1352 328)
+	(bus)
+)
+(connector
+	(text "REM" (rect 1330 392 1353 404)(font "Arial" ))
+	(pt 1320 408)
+	(pt 1352 408)
+)
+(connector
+	(text "WEM" (rect 1330 408 1355 420)(font "Arial" ))
+	(pt 1320 424)
+	(pt 1352 424)
+)
+(connector
+	(text "EN" (rect 1330 424 1345 436)(font "Arial" ))
+	(pt 1320 440)
+	(pt 1352 440)
+)
+(connector
+	(text "REM" (rect 1578 296 1601 308)(font "Arial" ))
+	(pt 1536 312)
+	(pt 1600 312)
+)
+(connector
+	(text "WEM" (rect 1578 312 1603 324)(font "Arial" ))
+	(pt 1552 328)
+	(pt 1600 328)
+)
+(connector
+	(pt 1568 344)
+	(pt 1600 344)
+	(bus)
+)
+(connector
+	(pt 1568 360)
+	(pt 1600 360)
+	(bus)
+)
+(connector
+	(pt 1304 328)
+	(pt 1272 328)
+)
+(connector
+	(pt 1304 328)
+	(pt 1304 504)
+)
+(connector
+	(text "ZF" (rect 706 488 720 500)(font "Arial" ))
+	(pt 616 504)
+	(pt 1304 504)
+)
+(connector
+	(text "CLK" (rect 450 376 471 388)(font "Arial" ))
+	(pt 440 392)
+	(pt 472 392)
+)
+(connector
+	(text "CLK" (rect 642 408 663 420)(font "Arial" ))
+	(pt 664 424)
+	(pt 632 424)
+)
+(connector
+	(pt 664 520)
+	(pt 664 488)
+	(bus)
+)
+(connector
+	(pt 616 520)
+	(pt 664 520)
+	(bus)
+)
+(connector
+	(text "Immediate[15..0]" (rect 682 472 765 484)(font "Arial" ))
+	(pt 664 488)
+	(pt 856 488)
+	(bus)
+)
+(connector
+	(pt 856 488)
+	(pt 1520 488)
+	(bus)
+)
+(connector
+	(text "CLK" (rect 626 472 647 484)(font "Arial" ))
+	(pt 616 488)
+	(pt 648 488)
+)
+(connector
+	(pt 464 520)
+	(pt 432 520)
+	(bus)
+)
 (junction (pt 856 488))
 (junction (pt 968 312))
-(junction (pt 1504 488))
+(junction (pt 1520 488))
