@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 160 112)
+	(rect 16 16 160 144)
 	(text "ALU" (rect 5 0 29 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 80 25 92)(font "Arial" ))
+	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -40,9 +40,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "S[3..0]" (rect 0 0 36 14)(font "Arial" (font_size 8)))
-		(text "S[3..0]" (rect 21 59 57 73)(font "Arial" (font_size 8)))
+		(text "S[2..0]" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "S[2..0]" (rect 21 59 57 73)(font "Arial" (font_size 8)))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Jpnz" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "Jpnz" (rect 21 75 48 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "PCBr" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "PCBr" (rect 21 91 49 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
 	)
 	(port
 		(pt 144 32)
@@ -54,11 +68,11 @@ applicable agreement for further details.
 	(port
 		(pt 144 48)
 		(output)
-		(text "ZF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "ZF" (rect 108 43 123 57)(font "Arial" (font_size 8)))
+		(text "BrO" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "BrO" (rect 101 43 123 57)(font "Arial" (font_size 8)))
 		(line (pt 144 48)(pt 128 48))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 80))
+		(rectangle (rect 16 16 128 112))
 	)
 )

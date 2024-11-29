@@ -65,13 +65,6 @@ applicable agreement for further details.
 		(text "Xor[15..0]" (rect 92 75 147 89)(font "Arial" (font_size 8)))
 		(line (pt 168 80)(pt 152 80)(line_width 3))
 	)
-	(port
-		(pt 168 96)
-		(output)
-		(text "ZF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "ZF" (rect 132 91 147 105)(font "Arial" (font_size 8)))
-		(line (pt 168 96)(pt 152 96))
-	)
 	(drawing
 		(rectangle (rect 16 16 152 112))
 	)

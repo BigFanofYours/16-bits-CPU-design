@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 80 304 248 320)
+	(rect 80 336 248 352)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "ZF" (rect 5 0 19 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 80 336 248 352)
+	(rect 80 304 248 320)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
+	(text "BrI" (rect 5 0 20 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1236,7 +1236,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 80 440 112 472)
+	(rect 144 440 176 472)
 	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
 	(text "inst25" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
 	(port
@@ -1254,7 +1254,7 @@ applicable agreement for further details.
 	(rotate270)
 )
 (symbol
-	(rect 80 488 96 520)
+	(rect 160 472 176 504)
 	(text "VCC" (rect 0 5 10 25)(font "Arial" (font_size 6))(vertical))
 	(text "inst26" (rect 5 0 17 29)(font "Arial" )(vertical)(invisible))
 	(port
@@ -1333,11 +1333,6 @@ applicable agreement for further details.
 	(pt 248 296)
 	(pt 280 296)
 	(bus)
-)
-(connector
-	(text "ZF" (rect 258 296 272 308)(font "Arial" ))
-	(pt 248 312)
-	(pt 280 312)
 )
 (connector
 	(pt 248 344)
@@ -1650,11 +1645,6 @@ applicable agreement for further details.
 	(pt 704 320)
 	(pt 736 320)
 	(bus)
-)
-(connector
-	(text "ZF" (rect 714 320 728 332)(font "Arial" ))
-	(pt 704 336)
-	(pt 736 336)
 )
 (connector
 	(pt 952 192)
@@ -2063,20 +2053,30 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "CONST[15..6]" (rect 112 440 181 452)(font "Arial" ))
-	(pt 144 456)
-	(pt 112 456)
-	(bus)
-)
-(connector
-	(text "CONST[5..0]" (rect 96 488 159 500)(font "Arial" ))
-	(pt 128 504)
-	(pt 96 504)
-	(bus)
-)
-(connector
 	(pt 80 328)
 	(pt 280 328)
+)
+(connector
+	(text "CONST[15..6]" (rect 176 440 245 452)(font "Arial" ))
+	(pt 208 456)
+	(pt 176 456)
+	(bus)
+)
+(connector
+	(text "CONST[5..0]" (rect 176 472 239 484)(font "Arial" ))
+	(pt 208 488)
+	(pt 176 488)
+	(bus)
+)
+(connector
+	(text "BrI" (rect 258 296 272 308)(font "Arial" ))
+	(pt 248 312)
+	(pt 280 312)
+)
+(connector
+	(text "BrI" (rect 714 320 728 332)(font "Arial" ))
+	(pt 704 336)
+	(pt 736 336)
 )
 (junction (pt 296 544))
 (junction (pt 1128 488))
