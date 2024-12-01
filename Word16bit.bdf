@@ -1505,11 +1505,6 @@ applicable agreement for further details.
 	(pt 280 64)
 )
 (connector
-	(text "W" (rect 433 56 443 68)(font "Arial" ))
-	(pt 448 72)
-	(pt 416 72)
-)
-(connector
 	(pt 232 144)
 	(pt 248 144)
 )
@@ -1524,11 +1519,6 @@ applicable agreement for further details.
 (connector
 	(pt 280 64)
 	(pt 352 64)
-)
-(connector
-	(text "R" (rect 433 120 441 132)(font "Arial" ))
-	(pt 448 136)
-	(pt 416 136)
 )
 (connector
 	(text "D[15..0]" (rect 232 32 272 44)(font "Arial" ))
@@ -1895,6 +1885,16 @@ applicable agreement for further details.
 	(text "R" (rect 1008 643 1020 651)(font "Arial" )(vertical))
 	(pt 1024 640)
 	(pt 1024 672)
+)
+(connector
+	(text "W" (rect 433 56 443 68)(font "Arial" ))
+	(pt 448 72)
+	(pt 416 72)
+)
+(connector
+	(text "R" (rect 433 120 441 132)(font "Arial" ))
+	(pt 448 136)
+	(pt 416 136)
 )
 (junction (pt 248 144))
 (junction (pt 280 64))

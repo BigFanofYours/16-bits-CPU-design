@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 272 384 440 400)
+	(rect 272 416 440 432)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
@@ -223,49 +223,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1352 376 1472 472)
-	(text "IOControl" (rect 5 0 56 14)(font "Arial" (font_size 8)))
-	(text "inst14" (rect 8 80 37 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "REM" (rect 0 0 24 14)(font "Arial" (font_size 8)))
-		(text "REM" (rect 21 27 45 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "WEM" (rect 0 0 28 14)(font "Arial" (font_size 8)))
-		(text "WEM" (rect 21 43 49 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "EN" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "EN" (rect 21 59 36 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 120 32)
-		(output)
-		(text "REMO" (rect 0 0 34 14)(font "Arial" (font_size 8)))
-		(text "REMO" (rect 65 27 99 41)(font "Arial" (font_size 8)))
-		(line (pt 120 32)(pt 104 32))
-	)
-	(port
-		(pt 120 48)
-		(output)
-		(text "WEMO" (rect 0 0 37 14)(font "Arial" (font_size 8)))
-		(text "WEMO" (rect 62 43 99 57)(font "Arial" (font_size 8)))
-		(line (pt 120 48)(pt 104 48))
-	)
-	(drawing
-		(rectangle (rect 16 16 104 80))
-	)
-)
-(symbol
 	(rect 1600 280 1760 408)
 	(text "DMem" (rect 5 0 39 14)(font "Arial" (font_size 8)))
 	(text "inst2" (rect 8 112 31 124)(font "Arial" ))
@@ -306,101 +263,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 144 112))
-	)
-)
-(symbol
-	(rect 32 304 440 384)
-	(text "ONCHIP_ROM" (rect 5 0 79 12)(font "Arial" ))
-	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 0 0 178 12)(font "Arial" ))
-		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 21 27 199 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 408 32)
-		(output)
-		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 0 0 156 12)(font "Arial" ))
-		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 255 27 411 39)(font "Arial" ))
-		(line (pt 408 32)(pt 392 32)(line_width 3))
-	)
-	(parameter
-		"ADDRESS_WIDTH"
-		"4"
-		""
-		(type "PARAMETER_UNSIGNED_HEX")	)
-	(parameter
-		"DATA_WIDTH"
-		"16"
-		""
-		(type "PARAMETER_UNSIGNED_BIN")	)
-	(parameter
-		"INIT_FILE"
-		"test.hex"
-		""
-		(type "PARAMETER_STRING")	)
-	(drawing
-		(rectangle (rect 16 16 392 64))
-	)
-	(annotation_block (parameter)(rect 120 232 355 288))
-)
-(symbol
-	(rect 1128 280 1272 408)
-	(text "ALU" (rect 5 0 29 14)(font "Arial" (font_size 8)))
-	(text "inst1" (rect 8 112 31 124)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "A[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
-		(text "A[15..0]" (rect 21 27 65 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "B[15..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
-		(text "B[15..0]" (rect 21 43 64 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "S[2..0]" (rect 0 0 36 14)(font "Arial" (font_size 8)))
-		(text "S[2..0]" (rect 21 59 57 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "Jpnz" (rect 0 0 27 14)(font "Arial" (font_size 8)))
-		(text "Jpnz" (rect 21 75 48 89)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "PCBr" (rect 0 0 28 14)(font "Arial" (font_size 8)))
-		(text "PCBr" (rect 21 91 49 105)(font "Arial" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 144 32)
-		(output)
-		(text "O[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
-		(text "O[15..0]" (rect 79 27 123 41)(font "Arial" (font_size 8)))
-		(line (pt 144 32)(pt 128 32)(line_width 3))
-	)
-	(port
-		(pt 144 48)
-		(output)
-		(text "BrO" (rect 0 0 22 14)(font "Arial" (font_size 8)))
-		(text "BrO" (rect 101 43 123 57)(font "Arial" (font_size 8)))
-		(line (pt 144 48)(pt 128 48))
-	)
-	(drawing
-		(rectangle (rect 16 16 128 112))
 	)
 )
 (symbol
@@ -460,6 +322,137 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 128 80))
+	)
+)
+(symbol
+	(rect 32 304 440 384)
+	(text "ONCHIP_ROM" (rect 5 0 79 12)(font "Arial" ))
+	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 0 0 178 12)(font "Arial" ))
+		(text "ADDRESS[ADDRESS_WIDTH-1..0]" (rect 21 27 199 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 408 32)
+		(output)
+		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 0 0 156 12)(font "Arial" ))
+		(text "DATA_OUT[DATA_WIDTH-1..0]" (rect 255 27 411 39)(font "Arial" ))
+		(line (pt 408 32)(pt 392 32)(line_width 3))
+	)
+	(parameter
+		"ADDRESS_WIDTH"
+		"16"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DATA_WIDTH"
+		"16"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"INIT_FILE"
+		"test.hex"
+		""
+		(type "PARAMETER_STRING")	)
+	(drawing
+		(rectangle (rect 16 16 392 64))
+	)
+	(annotation_block (parameter)(rect 120 232 355 288))
+)
+(symbol
+	(rect 1360 376 1472 472)
+	(text "IOControl" (rect 5 0 56 14)(font "Arial" (font_size 8)))
+	(text "inst8" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "R/W" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "R/W" (rect 21 27 44 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "EN" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "EN" (rect 21 43 36 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 112 32)
+		(output)
+		(text "REMO" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "REMO" (rect 57 27 91 41)(font "Arial" (font_size 8)))
+		(line (pt 112 32)(pt 96 32))
+	)
+	(port
+		(pt 112 48)
+		(output)
+		(text "WEMO" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "WEMO" (rect 54 43 91 57)(font "Arial" (font_size 8)))
+		(line (pt 112 48)(pt 96 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 96 80))
+	)
+)
+(symbol
+	(rect 1128 280 1272 408)
+	(text "ALU" (rect 5 0 29 14)(font "Arial" (font_size 8)))
+	(text "inst10" (rect 8 112 37 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "A[15..0]" (rect 21 27 65 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "B[15..0]" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "B[15..0]" (rect 21 43 64 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "S[2..0]" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "S[2..0]" (rect 21 59 57 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "Jpnz" (rect 0 0 27 14)(font "Arial" (font_size 8)))
+		(text "Jpnz" (rect 21 75 48 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "PCBr" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "PCBr" (rect 21 91 49 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "O[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "O[15..0]" (rect 79 27 123 41)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32)(line_width 3))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "BrO" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "BrO" (rect 101 43 123 57)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 128 112))
 	)
 )
 (connector
@@ -647,21 +640,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "REM" (rect 1330 392 1353 404)(font "Arial" ))
-	(pt 1320 408)
-	(pt 1352 408)
-)
-(connector
-	(text "WEM" (rect 1330 408 1355 420)(font "Arial" ))
-	(pt 1320 424)
-	(pt 1352 424)
-)
-(connector
-	(text "EN" (rect 1330 424 1345 436)(font "Arial" ))
-	(pt 1320 440)
-	(pt 1352 440)
-)
-(connector
 	(pt 1568 344)
 	(pt 1600 344)
 	(bus)
@@ -680,11 +658,6 @@ applicable agreement for further details.
 	(pt 1304 504)
 )
 (connector
-	(text "CLK" (rect 450 376 471 388)(font "Arial" ))
-	(pt 440 392)
-	(pt 472 392)
-)
-(connector
 	(text "CLK" (rect 642 408 663 420)(font "Arial" ))
 	(pt 664 424)
 	(pt 632 424)
@@ -693,11 +666,6 @@ applicable agreement for further details.
 	(text "CLK" (rect 626 472 647 484)(font "Arial" ))
 	(pt 616 488)
 	(pt 648 488)
-)
-(connector
-	(pt 464 520)
-	(pt 432 520)
-	(bus)
 )
 (connector
 	(text "ALUS" (rect 874 376 902 388)(font "Arial" ))
@@ -795,6 +763,36 @@ applicable agreement for further details.
 (connector
 	(pt 1472 552)
 	(pt 1456 552)
+	(bus)
+)
+(connector
+	(text "CLK" (rect 450 408 471 420)(font "Arial" ))
+	(pt 440 424)
+	(pt 472 424)
+)
+(connector
+	(text "EN" (rect 1338 408 1353 420)(font "Arial" ))
+	(pt 1328 424)
+	(pt 1360 424)
+)
+(connector
+	(text "R/W" (rect 1338 392 1360 404)(font "Arial" ))
+	(pt 1360 408)
+	(pt 1328 408)
+)
+(connector
+	(pt 16 520)
+	(pt 464 520)
+	(bus)
+)
+(connector
+	(pt 16 520)
+	(pt 16 336)
+	(bus)
+)
+(connector
+	(pt 16 336)
+	(pt 32 336)
 	(bus)
 )
 (junction (pt 856 488))
