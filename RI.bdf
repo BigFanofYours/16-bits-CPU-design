@@ -243,6 +243,22 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 736 944 915 960)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Immediate[15..0]" (rect 90 0 173 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 512 48 576 96)
 	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
@@ -916,6 +932,28 @@ applicable agreement for further details.
 		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
 	)
 )
+(symbol
+	(rect 552 920 680 1016)
+	(text "extend10to16" (rect 5 0 82 14)(font "Arial" (font_size 8)))
+	(text "inst2" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "I[9..0]" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "I[9..0]" (rect 21 27 51 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "O[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "O[15..0]" (rect 63 27 107 41)(font "Arial" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 80))
+	)
+)
 (connector
 	(pt 296 64)
 	(pt 320 64)
@@ -1296,6 +1334,17 @@ applicable agreement for further details.
 (connector
 	(pt 520 808)
 	(pt 520 792)
+)
+(connector
+	(pt 680 952)
+	(pt 736 952)
+	(bus)
+)
+(connector
+	(text "I[9..0]" (rect 530 936 559 948)(font "Arial" ))
+	(pt 552 952)
+	(pt 520 952)
+	(bus)
 )
 (junction (pt 688 472))
 (junction (pt 656 824))
