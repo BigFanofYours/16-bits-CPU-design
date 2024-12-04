@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 184 304 352 320)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "I[15..0]" (rect 5 0 41 12)(font "Arial" ))
+	(text "I[15..0]" (rect 5 0 40 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(output)
 	(rect 784 304 960 320)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "DAD[4..0]" (rect 90 0 139 12)(font "Arial" ))
+	(text "DAD[5..0]" (rect 90 0 139 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -52,7 +52,7 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(text "I[4..0]" (rect 762 296 791 308)(font "Arial" ))
+	(text "I[5..0]" (rect 762 296 791 308)(font "Arial" ))
 	(pt 784 312)
 	(pt 752 312)
 	(bus)
