@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 160 144)
+	(rect 16 16 160 176)
 	(text "ALU" (rect 5 0 29 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -59,6 +59,20 @@ applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
+		(pt 0 112)
+		(input)
+		(text "ShiftL" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "ShiftL" (rect 21 107 54 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "ShiftR" (rect 0 0 34 14)(font "Arial" (font_size 8)))
+		(text "ShiftR" (rect 21 123 55 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
 		(pt 144 32)
 		(output)
 		(text "O[15..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
@@ -73,6 +87,6 @@ applicable agreement for further details.
 		(line (pt 144 48)(pt 128 48))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 112))
+		(rectangle (rect 16 16 128 144))
 	)
 )
